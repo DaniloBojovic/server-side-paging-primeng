@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "GK47JMfAgzxBqzTJTnloBlKiVOFB6N2+DosMOj/5+PQd+live1eJVs4WlOZCmQNd0DrxZdW2XGBpzLlUAYn8ug==",
+  "dgSpecHash": "5zh6oAceNfyDBDmTE6aaVcO0NhcucSUOcCI7eHQDvC6mN/rJTZnXZ+jBOjtxna/oaa/dl3DXgaSOi3ZoOEbdyQ==",
   "success": true,
-  "projectFilePath": "C:\\dbojovic\\server-side-paging\\BE\\ServerSidePaging\\ServerSidePaging.csproj",
+  "projectFilePath": "C:\\dbojovic\\server-side-paging-primeng\\server-side-paging-primeng\\BE\\ServerSidePaging\\ServerSidePaging.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\DaniloBojović\\.nuget\\packages\\automapper\\11.0.1\\automapper.11.0.1.nupkg.sha512",
     "C:\\Users\\DaniloBojović\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\dbojovic\\server-side-paging\\BE\\ServerSidePaging\\ServerSidePaging.csproj": {}
+    "C:\\dbojovic\\server-side-paging-primeng\\server-side-paging-primeng\\BE\\ServerSidePaging\\ServerSidePaging.csproj": {}
   },
   "projects": {
-    "C:\\dbojovic\\server-side-paging\\BE\\ServerSidePaging\\ServerSidePaging.csproj": {
+    "C:\\dbojovic\\server-side-paging-primeng\\server-side-paging-primeng\\BE\\ServerSidePaging\\ServerSidePaging.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\dbojovic\\server-side-paging\\BE\\ServerSidePaging\\ServerSidePaging.csproj",
+        "projectUniqueName": "C:\\dbojovic\\server-side-paging-primeng\\server-side-paging-primeng\\BE\\ServerSidePaging\\ServerSidePaging.csproj",
         "projectName": "ServerSidePaging",
-        "projectPath": "C:\\dbojovic\\server-side-paging\\BE\\ServerSidePaging\\ServerSidePaging.csproj",
+        "projectPath": "C:\\dbojovic\\server-side-paging-primeng\\server-side-paging-primeng\\BE\\ServerSidePaging\\ServerSidePaging.csproj",
         "packagesPath": "C:\\Users\\DaniloBojović\\.nuget\\packages\\",
-        "outputPath": "C:\\dbojovic\\server-side-paging\\BE\\ServerSidePaging\\obj\\",
+        "outputPath": "C:\\dbojovic\\server-side-paging-primeng\\server-side-paging-primeng\\BE\\ServerSidePaging\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\DaniloBojović\\AppData\\Roaming\\NuGet\\NuGet.Config",

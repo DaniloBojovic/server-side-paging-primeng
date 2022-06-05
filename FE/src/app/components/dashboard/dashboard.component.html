@@ -1,0 +1,55 @@
+<div class="table">
+  <p-table
+    [value]="books"
+    [lazy]="true"
+    (onLazyLoad)="loadBooks($event)"
+    [paginator]="true"
+    [rows]="10"
+    [totalRecords]="totalRecords"
+    [rowsPerPageOptions]="[5, 10, 15, 20]"
+    [loading]="loading"
+    [globalFilterFields]="['title', 'price', 'author']"
+  >
+    <ng-template pTemplate="header">
+      <tr>
+        <th style="width: 3rem"></th>
+        <th pSortableColumn="title">
+          Title <p-sortIcon field="title"></p-sortIcon>
+        </th>
+        <th pSortableColumn="author">
+          Author <p-sortIcon field="author"></p-sortIcon>
+        </th>
+        <th pSortableColumn="description">
+          Description <p-sortIcon field="description"></p-sortIcon>
+        </th>
+        <th pSortableColumn="img">Img <p-sortIcon field="img"></p-sortIcon></th>
+      </tr>
+      <tr>
+        <th style="width: 3rem"></th>
+        <th>
+          <p-columnFilter type="text" field="title"></p-columnFilter>
+        </th>
+        <th>
+          <p-columnFilter type="text" field="author"></p-columnFilter>
+        </th>
+        <th>
+          <p-columnFilter type="text" field="description"></p-columnFilter>
+        </th>
+        <th>
+          <p-columnFilter type="text" field="img"></p-columnFilter>
+        </th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-book>
+      <tr>
+        <td></td>
+        <td>{{ book.title }}</td>
+        <td>{{ book.author }}</td>
+        <td>{{ book.description }}</td>
+        <td>
+          <p-image src="{{ book.img }}" alt="Image" width="150"></p-image>
+        </td>
+      </tr>
+    </ng-template>
+  </p-table>
+</div>

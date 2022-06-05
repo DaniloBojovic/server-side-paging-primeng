@@ -22,7 +22,6 @@ namespace ServerSidePaging.Services
                 Books = books,
                 TotalRecords = bookAll.Count,
             };
-            //return await _context.Books.ToListAsync();
         }
     }
 }

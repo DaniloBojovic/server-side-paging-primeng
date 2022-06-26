@@ -1,7 +1,7 @@
 import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { LazyLoadEvent } from 'primeng/api';
 import { Customer, Representative } from 'src/app/models/customer';
-import { CustomerService } from 'src/app/services/customer.service';
+import { BookService } from 'src/app/services/book.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -18,17 +18,18 @@ export class DashboardComponent implements OnInit {
   loading!: boolean;
 
   constructor(
-    private customerService: CustomerService,
+    private bookService: BookService,
     private cdr: ChangeDetectorRef
   ) {}
 
   ngOnInit(): void {}
 
   loadBooks(event: LazyLoadEvent): void {
+    debugger;
     this.loading = true;
 
     setTimeout(() => {
-      this.customerService.getBooks({ lazyEvent: event }).then((res) => {
+      this.bookService.getBooks({ lazyEvent: event }).then((res) => {
         this.books = res.books;
         this.totalRecords = res.totalRecords;
         this.loading = false;

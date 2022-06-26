@@ -4,11 +4,10 @@ import { HttpClient, HttpParams } from '@angular/common/http';
 @Injectable({
   providedIn: 'root',
 })
-export class CustomerService {
+export class BookService {
   constructor(private http: HttpClient) {}
 
   getCustomersLarge(params?: any): Promise<any> {
-    debugger;
     return this.http
       .get<any>('assets/customers-large.json')
       .toPromise()
@@ -22,6 +21,10 @@ export class CustomerService {
     queryParams = queryParams.append('endRow', params.lazyEvent.rows);
     queryParams = queryParams.append('sortField', params.lazyEvent.sortField);
     queryParams = queryParams.append('sortOrder', params.lazyEvent.sortOrder);
+    queryParams = queryParams.append(
+      'globalFilter',
+      params.lazyEvent.globalFilter
+    );
     return this.http
       .get<any>('http://localhost:14170/api/Book/getbooks', {
         params: queryParams,

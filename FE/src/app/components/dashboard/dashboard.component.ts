@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { LazyLoadEvent } from 'primeng/api';
 import { Customer, Representative } from 'src/app/models/customer';
 import { CustomerService } from 'src/app/services/customer.service';
@@ -17,7 +17,10 @@ export class DashboardComponent implements OnInit {
 
   loading!: boolean;
 
-  constructor(private customerService: CustomerService) {}
+  constructor(
+    private customerService: CustomerService,
+    private cdr: ChangeDetectorRef
+  ) {}
 
   ngOnInit(): void {}
 
@@ -31,5 +34,9 @@ export class DashboardComponent implements OnInit {
         this.loading = false;
       });
     }, 1000);
+  }
+
+  ngAfterViewInit() {
+    this.cdr.detectChanges();
   }
 }

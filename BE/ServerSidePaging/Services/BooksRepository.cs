@@ -62,9 +62,16 @@ namespace ServerSidePaging.Services
             //var searchCriteria = filterParams.GlobalFilter != "null" ? filterParams.GlobalFilter : "";
             //var resultBooks = books.Where(x => x.Title.Contains(searchCriteria)).ToList();
 
+<<<<<<< HEAD
+=======
+            //var resultBooks = books.Where(b => b.Contains(filterParams.GlobalFilter));
+            var searchCriteria = filterParams.GlobalFilter != "null" ? filterParams.GlobalFilter : "";
+            var resultBooks = books.Where(x => x.Title.Contains(searchCriteria)).ToList();
+
+>>>>>>> main
             return new GetAllBooksResponseModel
             {
-                Books = books,
+                Books = resultBooks,
                 TotalRecords = bookAll.Count,
             };
         }

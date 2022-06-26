@@ -2,6 +2,8 @@
 using ServerSidePaging.Context;
 using ServerSidePaging.Models;
 using ServerSidePaging.Models.Books;
+using System;
+using System.Linq;
 
 namespace ServerSidePaging.Services
 {
@@ -54,10 +56,13 @@ namespace ServerSidePaging.Services
 
             var books = bookAll.Skip(filterParams.StartRow).Take(filterParams.EndRow).ToList();
 
-            
+            //var resultBooks = books.Where(b => b.Contains(filterParams.GlobalFilter));
+            var searchCriteria = filterParams.GlobalFilter != "null" ? filterParams.GlobalFilter : "";
+            var resultBooks = books.Where(x => x.Title.Contains(searchCriteria)).ToList();
+
             return new GetAllBooksResponseModel
             {
-                Books = books,
+                Books = resultBooks,
                 TotalRecords = bookAll.Count,
             };
         }
